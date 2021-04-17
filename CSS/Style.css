@@ -1,0 +1,132 @@
+/* Start Variables */
+
+:root {
+    --primary-color: hsl(0, 0%, 95%);
+    --p-color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* End Variables */
+
+/* Start General Rules */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Big Shoulders Display', cursive;
+    background-color: var(--primary-color);
+}
+
+h1,
+h2 {
+    margin: 30px 0;
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: white;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: var(--p-color);
+}
+
+button {
+    border: 0;
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    transform: scale(0.98);
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 300px);
+}
+
+/* End General Rules */
+
+/* Start Main */
+
+body {
+    position: relative;
+}
+
+.main {
+    margin: 150px auto 0;
+
+}
+
+.container > div {
+    padding: 40px;
+    background-color: var(--main-color);
+}
+
+.one {
+    --main-color: hsl(31, 77%, 52%);
+    border-radius: 10px 0 0 10px;
+}
+
+.two {
+    --main-color: hsl(184, 100%, 22%);
+}
+
+.three {
+    --main-color: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+}
+
+button {
+    margin-top: 70px;
+}
+
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        margin: 0;
+    }
+
+    .container {
+        padding: 0 20px;
+        margin-top: 50px;
+    }
+    .one {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .three {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+/* End Main */
